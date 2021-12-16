@@ -6,11 +6,16 @@ import web3 from './web3';
 import lottery from './lottery';
 
 class App extends Component {
-  constructor(props){
-    super(props);
+  // constructor(props){
+  //   super(props);
     
-    this.state = { manager: '' };
-  }
+  //   this.state = { manager: '' };
+  // }
+
+  // same functionality as the above construcotr
+  state = {
+    manager: ''
+  };
 
   async componentDidMount() {
     const manager = await lottery.methods.manager().call();
