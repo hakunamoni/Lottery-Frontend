@@ -4,12 +4,8 @@ import './App.css';
 import web3 from './web3';
 
 function App() {
-  console.log(web3.version);
-  web3.eth.getAccounts().then(console.log);
-  // web3.eth.getAccounts()
-  //    returns promise
-  // normally, make use of the async/await syntax, but can't use aync/await with the render method of react component.
-  // for any account retrieved will be automatically pass to the function name ("console.log") in .then, so it will be logged in the console
+  console.log(web3.version);  // 1.6.1
+  web3.eth.getAccounts().then(console.log);   // ['0xe67C2DC72e00D927F127Bb7CA259F75ca7142ec8']
 
   return (
     <div className="App">
